@@ -1,0 +1,77 @@
+header {
+    display: flex;
+    justify-content: space-around;
+    padding: 1%;
+    box-shadow: -3px 0px 1px 0px;
+}
+
+/* seizing for navbar */
+
+.logo-container {
+    width: 10%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.nav-container {
+    width: 35%;
+
+}
+
+.search-bar-container {
+    width: 35%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.account-item-container {
+    width: 20%;
+}
+
+/* Logo */
+
+img.logo {
+    width: 60%;
+}
+
+/* navigation bar */
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: inline;
+}
+
+.nav-item {
+    padding: 5px 15px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Search bar */
+
+.search-bar {
+    width: 80%;
+    padding: 2% 1%;
+    border-radius: 20px;
+    border: 1px solid lightgray;
+}
+
+.accounts-items {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.account-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 5%;
+}
