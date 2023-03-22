@@ -35,7 +35,7 @@ header {
 /* Logo */
 
 img.logo {
-    width: 60%;
+    width: 35%;
 }
 
 /* navigation bar */
@@ -76,4 +76,6 @@ header li {
     flex-direction: column;
     align-items: center;
     padding: 0 5%;
+    font-size: 14px;
+    font-weight: 500;
 }
