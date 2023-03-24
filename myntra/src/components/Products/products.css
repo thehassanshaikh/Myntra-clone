@@ -1,0 +1,16 @@
+section.products-section {
+    width: 100%;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+img.pro-img {
+    width: 100%;
+}
+
+.product-grid {
+    width: 22%;
+    margin: 0 1.5%;
+}

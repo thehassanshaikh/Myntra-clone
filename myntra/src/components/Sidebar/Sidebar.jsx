@@ -1,5 +1,10 @@
+import { useContext } from "react"
+import { ApiDataContext } from "../../App"
+
 import "./Sidebar.css"
 export const Sidebar = () => {
+    const data = useContext(ApiDataContext);
+    console.log(data)
     return(
         <aside className="sidebar-container">
             <div className="filter-holder">
