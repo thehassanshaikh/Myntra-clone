@@ -1,4 +1,5 @@
 import React, { useState, useEffect, createContext } from "react";
+import { Routes, Route } from "react-router-dom";
 import "./App.css"
 import { Navbar } from "./components/Navbar/Navbar";
 import { Products } from "./components/Products/products";
@@ -20,14 +21,18 @@ function App() {
     getApiDetails()
   }, []);
 
+
+
   return (
     <ApiDataContext.Provider value={apiData}> {/* Use the context here */}
       <Navbar />
+
       <div className="main-container">
-        <Sidebar />
-        <Products />
+        <Routes>
+          <Route path="/product-details" element={<SingleProduct />} />
+          <Route path="/" element={<Products />} />
+        </Routes>
       </div>
-      <SingleProduct />
     </ApiDataContext.Provider>
 
   );
