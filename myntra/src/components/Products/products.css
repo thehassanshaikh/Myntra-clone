@@ -9,7 +9,7 @@ section.products-section {
 
 .product-grid {
     width: 22%;
-    margin: 1% 1.5%;
+    margin: 1.5% 1.5%;
     -webkit-box-shadow: 0 2px 16px 4px rgba(40, 44, 63, .07);
     -moz-box-shadow: 0 2px 16px 4px rgba(40, 44, 63, .07);
     box-shadow: 0 2px 16px 4px rgba(40, 44, 63, .07);
@@ -72,4 +72,10 @@ img.pro-img {
     padding: 3.5%;
     border: none;
     color: white;
+    border-radius: 2px;
+}
+
+.product-button a {
+    text-decoration: none;
+    color: #ffff;
 }

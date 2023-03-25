@@ -20,7 +20,7 @@ export const Products = () => {
                             <h3 className="product-brand">Brand Name</h3>
                             <h3 className="product-title">{item.title}</h3>
                             <h3 className="product-price">₹ {item.price}</h3>
-                            <button className="product-button">View More</button>
+                            <button className="product-button"><a href="#">View More</a></button>
                         </div>
 
                     </div>

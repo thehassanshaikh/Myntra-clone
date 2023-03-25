@@ -1,11 +1,10 @@
-
-
 aside {
-    width: 10%;
+    width: 20%;
     padding-left: 2%;
     border-right: 1px solid gray;
     height: 100vh;
 }
+
 .sidebar-container ul {
     list-style: none;
 }
