@@ -1,4 +1,5 @@
 header {
+    padding: 1.5%;
     display: flex;
     justify-content: space-around;
     box-shadow: -0 4px 12px 0 rgba(0, 0, 0, 0.05);
@@ -18,7 +19,9 @@ header {
 
 .nav-container {
     width: 35%;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .search-bar-container {
