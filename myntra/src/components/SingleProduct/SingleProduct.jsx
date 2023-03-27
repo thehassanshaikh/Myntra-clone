@@ -1,24 +1,34 @@
 import "./SingleProduct.css"
-import { useContext } from "react";
 import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { ApiDataContext } from "../../App";
 
 export const SingleProduct = () => {
-    const { id } = useParams();
-    const data = useContext(ApiDataContext);
-    const product = data.find(item => item.id === parseInt(id));
+    const [product, setProduct] = useState([]);
+    const {id}  = useParams();
 
-    const [title, category, image, description, price] = data;
+    console.log(id)
 
+        const getProduct = async () =>{
+             await fetch(`https://content.newtonschool.co/v1/pr/63b6c911af4f30335b4b3b89/products?id=${id}`).then((res)=> res.json())
+             .then((data)=>{
+                // console.log(data)
+                setProduct(data);
+            })
+             .catch((error)=>{console.log(error)})
+
+
+        }
+
+    useEffect(()=>{
+        getProduct()
+    },[id])
+
+
+    console.log(product)
     return (
-        <section className="single-product-section">
-            <img src={image} width={"100px"} height={"100px"} alt="" />
-            <h3>Product Title: {title}</h3>
-            <h3>Price: ₹{price}</h3>
-            <p>Description: {description}</p>
-            {/* <p>Rating: {product.rating}</p> */}
-            <p>Category: {category}</p>
-            <button>Add to cart</button>
+        <section className="product-section">
+            <h2>{product[0]?.title}</h2>
         </section>
     )
 }
