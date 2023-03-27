@@ -18,14 +18,14 @@ export const Products = () => {
                     {data.map(item => (
                         <div className="product-grid">
                             <div className="pro-img-con">
-                                <Link to={`/product-details/${item.id}`} key={item.id}> <img src={item.image} alt="product image"
-                                    className="pro-img" /></Link>
+                                <img src={item.image} alt="product image"
+                                    className="pro-img" />
                             </div>
                             <div className="product-ditails">
                                 <h3 className="product-brand">Brand Name</h3>
                                 <h3 className="product-title">{item.title}</h3>
                                 <h3 className="product-price">₹ {item.price}</h3>
-                                <button className="product-button"><a href="#">View More</a></button>
+                                <button className="product-button"><a href="#"><Link to={`/product-details/${item.id}`} key={item.id}>View More</Link></a></button>
                             </div>
 
                         </div>
