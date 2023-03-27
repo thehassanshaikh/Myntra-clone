@@ -1,6 +1,5 @@
 import { useContext } from "react"
 import { ApiDataContext } from "../../App"
-
 import "./Sidebar.css"
 export const Sidebar = () => {
     return(
@@ -8,9 +7,9 @@ export const Sidebar = () => {
             <div className="filter-holder">
                 {/* Brands category */}
                 <div className="brands">
-                    <h3 className="sidebar-lable">Brands</h3>
+                    <h3 className="sidebar-lable">Filter</h3>
                     <ul>
-                        <li className="category-items"><input type="checkbox" onSe />All</li>
+                        <li className="category-items"><input type="checkbox"  />All</li>
                         <li className="category-items"><input type="checkbox" />Mens</li>
                         <li className="category-items"><input type="checkbox" />Womens</li>
                         <li className="category-items"><input type="checkbox" />Jewellry</li>
