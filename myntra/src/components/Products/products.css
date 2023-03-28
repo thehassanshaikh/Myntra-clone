@@ -2,7 +2,7 @@ section.products-section {
     width: 100%;
 }
 
-.product-container {
+.products-container {
     display: flex;
     flex-wrap: wrap;
 }
@@ -73,6 +73,7 @@ img.pro-img {
     border: none;
     color: white;
     border-radius: 2px;
+    cursor: pointer;
 }
 
 .product-button a {

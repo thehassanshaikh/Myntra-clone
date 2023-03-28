@@ -14,7 +14,7 @@ export const Products = () => {
         <>
             <Sidebar />
             <section className="products-section">
-                <div className="product-container">
+                <div className="products-container">
                     {data.map(item => (
                         <div className="product-grid">
                             <div className="pro-img-con">
@@ -25,7 +25,7 @@ export const Products = () => {
                                 <h3 className="product-brand">Brand Name</h3>
                                 <h3 className="product-title">{item.title}</h3>
                                 <h3 className="product-price">₹ {item.price}</h3>
-                                <button className="product-button"><a href="#"><Link to={`/product-details/${item.id}`} key={item.id}>View More</Link></a></button>
+                                <Link to={`/product-details/${item.id}`} key={item.id}> <button className="product-button"><a href="#">View More</a></button></Link>
                             </div>
 
                         </div>

@@ -29,10 +29,13 @@ function App() {
 
       <div className="main-container">
         <Routes>
-          <Route path="/product-details/:id" element={<SingleProduct />} />
           <Route path="/" element={<Products />} />
         </Routes>
       </div>
+      <Routes>
+      <Route path="/product-details/:id" element={<SingleProduct />} />
+      </Routes>
+
     </ApiDataContext.Provider>
 
   );
