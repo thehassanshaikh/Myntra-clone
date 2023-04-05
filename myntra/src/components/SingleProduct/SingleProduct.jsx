@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { ApiDataContext } from "../../App";
 import { AiOutlineHeart } from "react-icons/ai";
 import { Loader } from "../Loader/Loader";
+import { Link } from "react-router-dom";
 
 
 export const SingleProduct = () => {
@@ -43,7 +44,7 @@ export const SingleProduct = () => {
 			<p>{product[0]?.description}</p>
 			<div class="price">₹{product[0]?.price}</div>
 			<div class="buttons">
-				<button>Add to Cart</button>
+			<Link to="/cart"><button>Add to Cart</button></Link>
 				<button>Add to Wish List <AiOutlineHeart /></button>
 			</div>
 		</div>
