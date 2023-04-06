@@ -5,40 +5,25 @@ import { Navbar } from "./components/Navbar/Navbar";
 import { Products } from "./components/Products/products";
 import { Sidebar } from "./components/Sidebar/Sidebar";
 import { SingleProduct } from "./components/SingleProduct/SingleProduct";
-import {Cart } from "./components/Cart/Cart";
+import { Cart } from "./components/Cart/Cart";
+import ApiContextProvider from "./components/Context/ApiContext";
 
 export const ApiDataContext = createContext(); // Define the context outside the component
 
 function App() {
-  const [apiData, setApiData] = useState([]);
 
-  useEffect(() => {
-    const getApiDetails = async () => {
-      let response = await fetch("https://content.newtonschool.co/v1/pr/63b6c911af4f30335b4b3b89/products")
-      response = await response.json();
-      setApiData(response);
-    }
-
-    getApiDetails()
-  }, []);
 
 
 
   return (
-    <ApiDataContext.Provider value={apiData}> {/* Use the context here */}
+    <ApiContextProvider>{/* Use the context here */}
       <Navbar />
-
-      <div className="main-container">
-        <Routes>
-          <Route path="/" element={<Products />} /> 
-          <Route path="/product-details/:id" element={<SingleProduct />} />
-          <Route path="/cart" element={<Cart /> } /> 
-        </Routes>
-      </div>
-  
-  
-
-    </ApiDataContext.Provider>
+      <Routes>
+        <Route path="/" element={<Products />} />
+        <Route path="/product-details/:id" element={<SingleProduct />} />
+        <Route path="/cart" element={<Cart />} />
+      </Routes>
+    </ApiContextProvider>
 
   );
 }

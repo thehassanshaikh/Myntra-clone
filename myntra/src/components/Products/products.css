@@ -1,3 +1,7 @@
+.main-container {
+    display: flex;
+}
+
 section.products-section {
     width: 100%;
 }

@@ -2,20 +2,22 @@ import { useContext } from "react"
 import { Link } from "react-router-dom";
 import { Sidebar } from "../Sidebar/Sidebar";
 import { AiOutlineHeart } from "react-icons/ai";
-import { ApiDataContext } from "../../App"
+import { ApiContext } from "../Context/ApiContext";
 import "./products.css"
 
 export const Products = () => {
 
-    const data = useContext(ApiDataContext);
+    const { apiData } = useContext(ApiContext);
+
+
 
 
     return (
-        <>
+        <div className="main-container">
             <Sidebar />
             <section className="products-section">
                 <div className="products-container">
-                    {data.map(item => (
+                    {apiData.map(item => (
                         <div className="product-grid">
                             <div className="pro-img-con">
                                 <img src={item.image} alt="product image"
@@ -34,6 +36,6 @@ export const Products = () => {
                 </div>
 
             </section>
-        </>
+        </div>
     )
 }
